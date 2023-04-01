@@ -1,0 +1,11 @@
+[Unit]
+Description=Sets up VS Code with necessary extensions for CDP
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=vagrant
+ExecStart=/bin/bash /vscode_provision.sh
+
+[Install]
+WantedBy=multi-user.target
